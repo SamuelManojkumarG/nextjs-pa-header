@@ -39,11 +39,11 @@ export default function Home() {
           <button onClick={btnSendiframeMsg()}>Send message to iframe</button>
         </div>
         
-        <div className={styles.iframeContainer_inactive}>
+        <div className={styles.iframeContainer}>
           <iframe className={styles.iframe} src='https://task-100020--patient-nextjs-poc.netlify.app/'></iframe>
         </div>
 
-        <div className={styles.iframeContainer}>
+        <div className={styles.iframeContainer_inactive}>
           <iframe id='iframe-pa' className={styles.iframe} src='https://pa3poc.patientaccess.com/dashboard'></iframe>
         </div>
 
