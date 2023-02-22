@@ -34,10 +34,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-
-        <div className={styles.iframeContainer_inactive}>
-          <button onClick={btnSendiframeMsg()}>Send message to iframe</button>
-        </div>
         
         <div className={styles.iframeContainer}>
           <iframe className={styles.iframe} src='https://task-100020--patient-nextjs-poc.netlify.app/'></iframe>
