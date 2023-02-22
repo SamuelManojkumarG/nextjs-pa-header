@@ -1,0 +1,18 @@
+// components/header/Header.module.scss
+
+// dependencies
+@import 'styles/variables/index';
+
+// header
+
+
+// header
+.header {
+  box-shadow: 0 2px 5px 0 rgba(#32335d, .15);
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+}

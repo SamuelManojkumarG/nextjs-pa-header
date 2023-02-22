@@ -1,0 +1,15 @@
+// components/footer/Footer.module.scss
+
+// dependencies
+@import 'styles/variables/index';
+
+// footer
+
+
+// footer
+.footer {
+  background: $color-primary;
+  color: $color-white;
+  padding-bottom: 24px;
+  padding-top: 24px;
+}

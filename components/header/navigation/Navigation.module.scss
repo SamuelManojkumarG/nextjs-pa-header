@@ -1,0 +1,127 @@
+// components/header/navigation/Navigation.module.scss
+
+// dependencies
+@import 'styles/variables/index';
+
+// navigation
+// navigation-list
+// navigation-item
+// navigation-one
+// navigation-two
+// navigation-four
+// navigation-five
+// navigation-six
+// navigation-seven
+
+
+// navigation
+.navigation {
+  padding: 6px 0;
+}
+
+
+// navigation-list
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+
+// navigation-item
+.navigation-item {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.navigation-item a {
+  color: $color-primary;
+  display: block;
+  font-size: 16px;
+  font-weight: $font-weight-medium;
+  line-height: 24px;
+  padding: 12px 32px;
+  position: relative;
+  transition: color .3s ease-in-out;
+  white-space: nowrap;
+}
+
+.navigation-item i {
+  bottom: 0;
+  height: 3px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  transition: background .3s ease-in-out;
+}
+
+
+// navigation-one
+.navigation-one.active {
+  color: $color-navigation-one;
+}
+
+.navigation-one.active i {
+  background: $color-navigation-one;
+}
+
+
+// navigation-two
+.navigation-two.active {
+  color: $color-navigation-two;
+}
+
+.navigation-two.active i {
+  background: $color-navigation-two;
+}
+
+
+// navigation-three
+.navigation-three.active {
+  color: $color-navigation-three;
+}
+
+.navigation-three.active i {
+  background: $color-navigation-three;
+}
+
+
+// navigation-four
+.navigation-four.active {
+  color: $color-navigation-four;
+}
+
+.navigation-four.active i {
+  background: $color-navigation-four;
+}
+
+
+// navigation-five
+.navigation-five.active {
+  color: $color-navigation-five;
+}
+
+.navigation-five.active i {
+  background: $color-navigation-five;
+}
+
+
+// navigation-six
+.navigation-six.active {
+  color: $color-navigation-six;
+}
+
+.navigation-six.active i {
+  background: $color-navigation-six;
+}
+
+
+// navigation-seven
+.navigation-seven.active {
+  color: $color-navigation-seven;
+}
+
+.navigation-seven.active i {
+  background: $color-navigation-seven;
+}

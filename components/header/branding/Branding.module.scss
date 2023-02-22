@@ -1,0 +1,83 @@
+// components/header/branding/Branding.module.scss
+
+// dependencies
+@import 'styles/variables/index';
+
+// branding
+// branding-wrapper
+// branding-logo
+// branding-list
+// branding-item
+
+
+// branding
+.branding {
+  padding: 12px 0;
+  border-bottom: 1px solid $color-grey-light;
+}
+
+
+// branding-wrapper
+.branding-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+// branding-logo
+.branding-logo {
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+}
+
+.branding-logo:hover {
+  opacity: .8;
+}
+
+
+// branding-list
+.branding-list {
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+
+// branding-item
+.branding-item {
+  align-items: center;
+  border-left: 1px solid $color-grey-light;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: $font-weight-medium;
+  list-style-type: none;
+  line-height: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+}
+
+.branding-item:last-of-type {
+  padding-right: 0;
+}
+
+.branding-item i + span,
+.branding-item span + i {
+  margin-left: 12px;
+}
+
+.branding-item span + i svg {
+  height: 12px;
+  width: 12px;
+}
+
+.branding-item svg {
+  height: 18px;
+  width: 18px;
+}
+
+.branding-item svg * {
+  fill: $color-primary;
+}
