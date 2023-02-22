@@ -40,7 +40,7 @@ export default function Home() {
         </div>
         
         <div  className={styles.iframeContainer_inactive}>
-          <iframe className={styles.iframe} src='http://localhost:3001/'></iframe>
+          <iframe className={styles.iframe} src='https://task-100020--patient-nextjs-poc.netlify.app/'></iframe>
         </div>
 
         <div  className={styles.iframeContainer}>
