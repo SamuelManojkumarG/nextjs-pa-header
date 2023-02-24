@@ -9,13 +9,14 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
-  const btnSendiframeMsg = () => {
-    
+  function btnSendiframeMsg() {
+    // Test
   }
 
   React.useEffect(() => {
     const handler = event => {
-      const data = JSON.parse(event.data)
+      console.log(event, event.data);
+      const data = event.data;
       console.log("Hello World?", data)
     }
 
@@ -36,7 +37,7 @@ export default function Home() {
       <main className={styles.main}>
 
         <div className={styles.iframeContainer_inactive}>
-          <button onClick={btnSendiframeMsg()}>Send message to iframe</button>
+          <button onClick={() => {btnSendiframeMsg()}}>Send message to iframe</button>
         </div>
         
         <div className={styles.iframeContainer_inactive}>
