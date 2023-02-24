@@ -43,7 +43,7 @@ export default function Branding() {
       }
     };
     const iframe = document.querySelector("#iframe-pa");
-    const url = "https://poc.patientaccess.com/";
+    const url = "https://pa3poc.patientaccess.com/";
     iframe.contentWindow.postMessage(message, url);
   }
 
