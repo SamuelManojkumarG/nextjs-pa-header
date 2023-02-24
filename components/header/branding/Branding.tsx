@@ -20,7 +20,7 @@ export default function Branding() {
 
   function btnSendiframeMsg() {
     const message = {
-      "id": "123456789",
+      "id": Math.floor(Math.random() * 100),
       "name": "Lisa White",
       "username": "lisa",
       "email": "Sincere@april.biz",
