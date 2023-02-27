@@ -8,20 +8,6 @@ import React from 'react';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-
-  React.useEffect(() => {
-    const handler = event => {
-      console.log(event, event.data);
-      const data = event.data;
-      console.log("Message from iframe - ", data)
-    }
-
-    window.addEventListener("message", handler)
-
-    // clean up
-    return () => window.removeEventListener("message", handler)
-  }, [])
-
   return (
     <>
       <Head>
