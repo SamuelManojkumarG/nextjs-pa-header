@@ -19,6 +19,7 @@ import styles from './Branding.module.scss'
 export default function Branding() {
 
   const [receivedFlag, setReceivedFlag] = useState(false);
+  const [counter, setCounter] = useState(0);
 
   function btnSendiframeMsg() {
     const message = {
@@ -55,6 +56,7 @@ export default function Branding() {
       const data = event.data;
       console.log("Message from iframe - ", data);
       setReceivedFlag(!receivedFlag);
+      setCounter(Math.floor(Math.random() * 100));
     }
 
     window.addEventListener("message", handler)
@@ -76,9 +78,12 @@ export default function Branding() {
             </li>
             {receivedFlag && 
               <li className={styles['branding-item']}>
-                <i><IconSearch /></i>
-              </li>              
+                <span>Counter: {counter}</span>
+              </li>    
             }
+            <li className={styles['branding-item']}>
+                <i><IconSearch /></i>
+              </li>  
             <li className={styles['branding-item']}>
               <i><IconCog /></i>
             </li>
