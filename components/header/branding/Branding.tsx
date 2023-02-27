@@ -1,5 +1,5 @@
 // components/header/branding/Branding.tsx
-
+import React, { useState, useEffect } from 'react';
 // next
 import Link from 'next/link'
 import Image from 'next/image'
@@ -17,6 +17,8 @@ import * as ConstantsPaths from '/constants/paths'
 import styles from './Branding.module.scss'
 
 export default function Branding() {
+
+  const [receivedFlag, setReceivedFlag] = useState(false);
 
   function btnSendiframeMsg() {
     const message = {
@@ -47,6 +49,20 @@ export default function Branding() {
     iframe.contentWindow.postMessage(message, url);
   }
 
+  useEffect(() => {
+    const handler = event => {
+      console.log(event, event.data);
+      const data = event.data;
+      console.log("Message from iframe - ", data);
+      setReceivedFlag(!receivedFlag);
+    }
+
+    window.addEventListener("message", handler)
+
+    // clean up
+    return () => window.removeEventListener("message", handler)
+  }, [])
+
   return (
     <div className={styles.branding}>
       <Container>
@@ -56,11 +72,13 @@ export default function Branding() {
           </Link>
           <ul className={styles['branding-list']}>
             <li className={styles['branding-item']}>
-              <button onClick={() => {btnSendiframeMsg()}}>Send message to iframe</button>
+              <button onClick={() => { btnSendiframeMsg() }}>Send message to iframe</button>
             </li>
-            <li className={styles['branding-item']}>
-              <i><IconSearch /></i>
-            </li>
+            {receivedFlag && 
+              <li className={styles['branding-item']}>
+                <i><IconSearch /></i>
+              </li>              
+            }
             <li className={styles['branding-item']}>
               <i><IconCog /></i>
             </li>
